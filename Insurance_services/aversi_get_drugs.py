@@ -47,25 +47,142 @@ from bs4 import BeautifulSoup as bs
 
 
 soup = bs(read_xml('r'), 'xml')
-ns2 = soup.find('NewDataSet')
+ns2 = soup.find_all('NewDataSet')
 
 
-for x in ns2.children:
-    print(x)
+for x in ns2[0].find_all('Medicaments'):
+    med_name_node = x.find('MedName')
+    if med_name_node is not None:
+        med_name = med_name_node.text
+    else:
+        med_name = None
 
-# mytree = ET.parse('response.xml')
-# myroot = mytree.getroot()
-# for x in myroot[0]:
-#     for x1 in x:
-#         for x2 in x1:
-#             for x3 in x2:
-#                 for x4 in x3:
-#                     for x5 in x4:
-#                         if x5.tag == 'MedName':
-#                             med_name = x5.text
-#                             print(med_name)
+    fact_name_node = x.find('FactName')
+    if fact_name_node is not None:
+        fact_name = fact_name_node.text
+    else:
+        fact_name = None
+
+    con_name_node = x.find('ConName')
+    if con_name_node is not None:
+        con_name = con_name_node.text
+    else:
+        con_name = None
+
+    gen_name_node = x.find('GenName')
+    if gen_name_node is not None:
+        gen_name = gen_name_node.text
+    else:
+        gen_name = None
+
+    cod_mat_node = x.find('COD_MAT')
+    if cod_mat_node is not None:
+        cod_mat = cod_mat_node.text
+    else:
+        cod_mat = None
+
+    cod_qvek_node = x.find('COD_QVEK')
+    if cod_qvek_node is not None:
+        cod_qvek = cod_qvek_node.text
+    else:
+        cod_qvek = None
+
+    cod_gac_node = x.find('COD_GAC')
+    if cod_gac_node is not None:
+        cod_gac = cod_gac_node.text
+    else:
+        cod_gac = None
+
+    cod_vat_node = x.find('COD_VAT')
+    if cod_vat_node is not None:
+        cod_vat = cod_vat_node.text
+    else:
+        cod_vat = None
+
+    price_gel_vat_node = x.find('PriceGEL_VAT')
+    if price_gel_vat_node is not None:
+        price_gel_vat = price_gel_vat_node.text
+    else:
+        price_gel_vat = None
+
+    unit_price_gel_vat_node = x.find('UnitPriceGEL_VAT')
+    if unit_price_gel_vat_node is not None:
+        unit_price_gel_vat = unit_price_gel_vat_node.text
+    else:
+        unit_price_gel_vat = None
+
+    price_gel_node = x.find('PriceGEL')
+    if price_gel_node is not None:
+        price_gel = price_gel_node.text
+    else:
+        price_gel = None
+
+    unit_price_gel_node = x.find('UnitPriceGEL')
+    if unit_price_gel_node is not None:
+        unit_price_gel = unit_price_gel_node.text
+    else:
+        unit_price_gel = None
+
+    med_namep_node = x.find('MedNameP')
+    if med_namep_node is not None:
+        med_namep = med_namep_node.text
+    else:
+        med_namep = None
+
+    dosage_node = x.find('Dosage')
+    if dosage_node is not None:
+        dosage = dosage_node.text
+    else:
+        dosage = None
+
+    numerus_node = x.find('Numerus')
+    if numerus_node is not None:
+        numerus = numerus_node.text
+    else:
+        numerus = None
+
+    calc_numerus_node = x.find('CalcNumerus')
+    if calc_numerus_node is not None:
+        calc_numerus = calc_numerus_node.text
+    else:
+        calc_numerus = None
+
+    distributor_node = x.find('Distributor')
+    if distributor_node is not None:
+        distributor = distributor_node.text
+    else:
+        distributor = None
+
+    geo_gen_name_node = x.find('GeoGenName')
+    if geo_gen_name_node is not None:
+        geo_gen_name = geo_gen_name_node.text
+    else:
+        geo_gen_name = None
+
+    cod_med_node = x.find('COD_MED')
+    if cod_med_node is not None:
+        cod_med = cod_med_node.text
+    else:
+        cod_med = None
+
+    fact_id_node = x.find('FactID')
+    if fact_id_node is not None:
+        fact_id = fact_id_node.text
+    else:
+        fact_id = None
+
+    med_name_eng_node = x.find('MedNameEng')
+    if med_name_eng_node is not None:
+        med_name_eng = med_name_eng_node.text
+    else:
+        med_name_eng = None
 
 
+
+
+    print(f'{med_name} | {fact_name} | {con_name} | {gen_name} | {cod_mat} | {cod_qvek} | {cod_gac} | {cod_vat}'
+          f'| {price_gel_vat} | {unit_price_gel_vat} | {price_gel} | {unit_price_gel} | {med_namep} | {dosage} '
+          f'| {numerus} | {calc_numerus} | {distributor} | {geo_gen_name} | {cod_med} | {fact_id} | {med_name_eng}')
 
 'MedName'
 'FactName'
