@@ -1,19 +1,3 @@
-
-# some_list = []
-#
-#
-#
-# a = True
-# idx = 0
-#
-# while True:
-#     b = not + a
-#     a = not + a
-#     idx += 1
-#     print(f'{idx} -- step {b}')
-#     if idx == 1000:
-#         break
-
 def is_year_leap(year):
     """
     takes year as int and returns True if year is leap
@@ -28,7 +12,7 @@ def is_year_leap(year):
         return True
     return False
 
-print(is_year_leap(2023))
+print(is_year_leap(1600))
 
 
 def days_in_month(year, month):
@@ -51,21 +35,27 @@ def days_in_month(year, month):
     return f'month range must be 1- 12'
 
 
+def day_of_year(year, month, day):
+    day_of_weeks = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    start_date = [1601, 1, 1, day_of_weeks[0]]
+    in_month = days_in_month(year, month)
+    days_in_year = 0
+    day_in_m = 0
+    for d in range(start_date[0], year):
+        if is_year_leap(d):
+            days_in_year += 366
+        else:
+            days_in_year += 365
+    for x in range(start_date[1], month):
+        day_in_m += days_in_month(year, x)
+    total = days_in_year + day_in_m + day - 1
+    a = total % 7
+    return day_of_weeks[a]
 
 
-print(days_in_month(2023, 6))
 
 
 
-# test_years = [1900, 2000, 2016, 1987]
-# test_months = [2, 2, 1, 11]
-# test_results = [28, 29, 31, 30]
-# for i in range(len(test_years)):
-#     yr = test_years[i]
-#     mo = test_months[i]
-#     print(yr, mo, "->", end="")
-#     result = days_in_month(yr, mo)
-#     if result == test_results[i]:
-#         print("OK")
-#     else:
-#         print("Failed")
+
+
+print(day_of_year(2023, 1, 24))

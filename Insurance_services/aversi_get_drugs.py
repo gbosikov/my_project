@@ -5,9 +5,26 @@ import mysql.connector
 
 
 AVERSI_URL = "http://185.69.172.34/ForInsuranceCompanies/ForInsuranceCompanies.asmx?op=GetAllMedFromAllDrugForInsurances"
+DB_NAME = 'serv_db'
 
 
-def aversi_drugs(url: str):
+def send_db_query(query: str):
+    mydb = mysql.connector.connect(
+        host='localhost',
+        user='admin',
+        password='4dmirq3J',
+        charset='utf-8',
+        database=DB_NAME
+    )
+
+    mycursor = mydb.cursor()
+    mycursor.execute(query)
+    mydb.commit()
+
+    return [x for x in mycursor]
+
+
+def take_aversi_drugs(url: str):
     """
     send request to url and creates xml file with response data
     :param url:
@@ -30,33 +47,9 @@ def aversi_drugs(url: str):
         f.close()
         return response.status_code
 
-print(aversi_drugs(AVERSI_URL))
 
-
-def db_create(db_name: str):
-    mydb = mysql.connector.connect(
-        host='localhost',
-        user='admin',
-        password='4dmirq3J',
-        charset='utf-8'
-    )
-
-    mycursor = mydb.cursor()
-    mycursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
-
-
-print(db_create('serv_db'))
-
-
-def table_create(database: str, t_name: str):
-    mydb = mysql.connector.connect(
-        host='localhost',
-        user='admin',
-        password='4dmirq3J',
-        database=database
-    )
-    mycursor = mydb.cursor()
-    mycursor.execute(f'CREATE TABLE IF NOT EXISTS {t_name} '
+def create_aversi_table():
+    send_db_query(f'CREATE TABLE IF NOT EXISTS aversi_drugs '
                      f'(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,'
                      f'med_name VARCHAR(255),'
                      f'fact_name VARCHAR(255),'
@@ -81,18 +74,7 @@ def table_create(database: str, t_name: str):
                      f'med_name_eng VARCHAR(255))')
 
 
-print(table_create('serv_db', 'aversi_drugs'))
-
-
 def aversi_drugs_ins():
-    mydb = mysql.connector.connect(
-        host='localhost',
-        user='admin',
-        password='4dmirq3J',
-        database='serv_db'
-    )
-    mycursor = mydb.cursor()
-
     domtree = xml.dom.minidom.parse('aversi_response.xml')
     group = domtree.documentElement
     medicaments = group.getElementsByTagName('Medicaments')
@@ -184,8 +166,27 @@ def aversi_drugs_ins():
         except IndexError:
             med_name_eng = 'NULL'
 
-        mycursor.execute('INSERT INTO aversi_drugs  VALUES ('
-                         f'{int(med_id[11:])},'
+        send_db_query(f'INSERT INTO aversi_drugs (med_name,'
+                      f'fact_name,'
+                      f'con_name,'
+                      f'gen_name,'
+                      f'cod_mat,'
+                      f'cod_qvek,'
+                      f'cod_gac,'
+                      f'cod_vat,'
+                      f'price_gel_vat,'
+                      f'unit_price_vat,'
+                      f'price_gel,'
+                      f'unit_price_gel,'
+                      f'med_namep,'
+                      f'dosage,'
+                      f'numerus,'
+                      f'calc_numerus,'
+                      f'form,'
+                      f'geo_gen_name,'
+                      f'cod_med,'
+                      f'fact_id,'
+                      f'med_name_eng) VALUES ('
                          f'"{med_name}",'
                          f'"{fact_name}",'
                          f'"{con_name}",'
@@ -207,6 +208,8 @@ def aversi_drugs_ins():
                          f'"{cod_med}",'
                          f'{fact_id},'
                          f'"{med_name_eng}")')
-        mydb.commit()
 
-print(aversi_drugs_ins())
+
+# print(take_aversi_drugs(AVERSI_URL))
+# print(create_aversi_table())
+# print(aversi_drugs_ins())
