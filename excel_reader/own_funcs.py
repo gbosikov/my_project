@@ -53,9 +53,4 @@ def day_of_year(year, month, day):
     return day_of_weeks[a]
 
 
-
-
-
-
-
-print(day_of_year(2023, 1, 24))
+print(day_of_year(2000, 12, 31))

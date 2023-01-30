@@ -1,71 +1,81 @@
+from random import randrange
 
-# some_list = []
+
+
+def init_borad():
+    board = [['' for row in range(1, 4)] for column in range(1, 4)]
+    pos = 1
+    for row in range(3):
+        for column in range(3):
+            board[row][column] = pos
+            pos += 1
+
+    return board
+
+
+print(init_borad())
+
+def display_board(board):
+
+
+    return
+
+
+print(display_board(init_borad()))
+
+def enter_move(board):
+    # The function accepts the board's current status, asks the user about their move, 
+    # checks the input, and updates the board according to the user's decision.
+    pass
+
+
+def make_list_of_free_fields(board):
+    # The function browses the board and builds a list of all the free squares; 
+    # the list consists of tuples, while each tuple is a pair of row and column numbers.
+    pass
+
+
+def victory_for(board, sign):
+    # The function analyzes the board's status in order to check if 
+    # the player using 'O's or 'X's has won the game
+    pass
+
+
+def draw_move(board):
+    # The function draws the computer's move and updates the board.
+    pass
+
+
+some_list = [
+    '+-------+-------+-------+',
+    '|       |       |       |',
+    '|   1   |   2   |   3   |',
+    '|       |       |       |',
+    '+-------+-------+-------+',
+    '|       |       |       |',
+    '|   4   |   X   |   6   |',
+    '|       |       |       |',
+    '+-------+-------+-------+',
+    '|       |       |       |',
+    '|   7   |   8   |   9   |',
+    '|       |       |       |',
+    '+-------+-------+-------+'
+
+]
+
+
+# def init_borad():
+#     global current_player
+#     board = [['' for x in range(3)] for i in range(3)]
+#     pos = 1
+#     for row in range(3):
+#         for column in range(3):
+#             board[row][column] = pos
+#             pos += 1
 #
+#     board[1][1] = 'X'
+#     current_player = 'O'
+#     return board
 #
-#
-# a = True
-# idx = 0
-#
-# while True:
-#     b = not + a
-#     a = not + a
-#     idx += 1
-#     print(f'{idx} -- step {b}')
-#     if idx == 1000:
-#         break
+# print(init_borad())
 
-def is_year_leap(year):
-    """
-    takes year as int and returns True if year is leap
-    :param year:
-    :return:
-    """
-    if year % 4 == 0:
-        if year % 100 == 0:
-            if year % 400 == 0:
-                return True
-            return False
-        return True
-    return False
-
-print(is_year_leap(2023))
-
-
-def days_in_month(year, month):
-    """
-    retuns days count in month
-    :param year:
-    :param month:
-    :return:
-    """
-    if month in range(1, 13):
-        if month == 2:
-            if is_year_leap(year):
-                days = 29
-            else:
-                days = 28
-            return days
-        else:
-            days = 30 + (month + month // 8) % 2
-            return days
-    return f'month range must be 1- 12'
-
-
-
-
-print(days_in_month(2023, 6))
-
-
-
-# test_years = [1900, 2000, 2016, 1987]
-# test_months = [2, 2, 1, 11]
-# test_results = [28, 29, 31, 30]
-# for i in range(len(test_years)):
-#     yr = test_years[i]
-#     mo = test_months[i]
-#     print(yr, mo, "->", end="")
-#     result = days_in_month(yr, mo)
-#     if result == test_results[i]:
-#         print("OK")
-#     else:
-#         print("Failed")
