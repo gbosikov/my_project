@@ -16,8 +16,14 @@ def init_borad():
 print(init_borad())
 
 def display_board(board):
+    print('+-------' * 3, '+', sep='')
+    for row in range(1, 4):
+        for column in range(1, 4):
+            print('|       ' * 3, '|', sep='')
 
 
+
+    print('+-------' * 3, '+', sep='')
     return
 
 
