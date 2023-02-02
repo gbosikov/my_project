@@ -54,3 +54,12 @@ def day_of_year(year, month, day):
 
 
 print(day_of_year(2000, 12, 31))
+
+
+
+some_lsr = [[1, 2, 3], [4, 'X', 6], [7, 8, 9]]
+
+for val in some_lsr:
+    for x in val:
+
+        print(x)
