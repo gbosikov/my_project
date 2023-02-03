@@ -5,12 +5,12 @@ def init_board():
         for col in range(3):
             board[row][col] = pos
             pos += 1
+    board[1][1] = 'X'
 
     return board
 
 
 print(init_board())
-
 
 
 def display_board(board):
@@ -30,17 +30,31 @@ def display_board(board):
 print(display_board(init_board()))
 
 
-
 def enter_move(board):
     # The function accepts the board's current status, asks the user about their move,
     # checks the input, and updates the board according to the user's decision.
-
-    while True:
+    turn_ok = False
+    while not turn_ok:
         user_inp = input('Enter some digit from 1 to 9: \n')
-        if len(user_inp) != 0 or int(user_inp) <= 0 or int(user_inp) > 9:
+        if len(user_inp) != 1 or user_inp <= '0' or user_inp > '9':
             print("Your move isn't correct, retry please ")
             continue
-    return
+        for row in range(3):
+            for col in range(3):
+                if int(user_inp) == board[row][col] and board[row][col] in ['X', 'O']:
+                    print("Your move isn't correct, this square is occupied, please retry again !")
+
+                elif int(user_inp) == board[row][col]:
+                    board[row][col] = 'O'
+
+        turn_ok = not turn_ok
+    return board
+
+
+some_lsr = [[1, 2, 3], ['O', 'X', 6], [7, 8, 9]]
+
+
+print(enter_move(some_lsr))
 
 
 def make_list_of_free_fields(board):

@@ -59,7 +59,9 @@ print(day_of_year(2000, 12, 31))
 
 some_lsr = [[1, 2, 3], [4, 'X', 6], [7, 8, 9]]
 
-for val in some_lsr:
-    for x in val:
+user_inp = input('Enter some digit from 1 to 9: \n')
 
-        print(x)
+for row in range(3):
+    for col in range(3):
+        print(row, col)
+        move = False
