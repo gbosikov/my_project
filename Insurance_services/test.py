@@ -51,7 +51,7 @@ def enter_move(board):
     return board
 
 
-some_lsr = [[1, 2, 3], ['O', 'X', 6], [7, 8, 9]]
+some_lsr = [[1, 2, 3], [4, 'X', 6], [7, 8, 9]]
 
 
 print(enter_move(some_lsr))
@@ -60,7 +60,12 @@ print(enter_move(some_lsr))
 def make_list_of_free_fields(board):
     # The function browses the board and builds a list of all the free squares;
     # the list consists of tuples, while each tuple is a pair of row and column numbers.
+    free_fields = []
+    for row in range(3):
+        for col in range(3):
+            free_fields.append(board[row][col])
     return
+
 
 
 def victory_for(board, sign):
