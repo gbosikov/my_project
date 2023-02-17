@@ -166,6 +166,7 @@ def aversi_drugs_ins():
         except IndexError:
             med_name_eng = 'NULL'
 
+
         send_db_query(f'INSERT INTO aversi_drugs (med_name,'
                       f'fact_name,'
                       f'con_name,'
@@ -210,6 +211,6 @@ def aversi_drugs_ins():
                          f'"{med_name_eng}")')
 
 
-# print(take_aversi_drugs(AVERSI_URL))
-# print(create_aversi_table())
-# print(aversi_drugs_ins())
+print(take_aversi_drugs(AVERSI_URL))
+print(create_aversi_table())
+print(aversi_drugs_ins())

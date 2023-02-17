@@ -63,14 +63,17 @@ def make_list_of_free_fields(board):
     free_fields = []
     for row in range(3):
         for col in range(3):
-            free_fields.append(board[row][col])
-    return
+            if board[row][col] not in ['O', 'X']:
+                free_fields.append(board[row][col])
+    return free_fields
 
 
+print(make_list_of_free_fields(some_lsr))
 
 def victory_for(board, sign):
     # The function analyzes the board's status in order to check if
     # the player using 'O's or 'X's has won the game
+
     return
 
 
