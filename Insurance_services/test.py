@@ -1,3 +1,5 @@
+from random import randrange
+
 def init_board():
     board = [['' for _ in range(1, 4)] for _ in range(1, 4)]
     pos = 1
@@ -70,13 +72,31 @@ def make_list_of_free_fields(board):
 
 print(make_list_of_free_fields(some_lsr))
 
+
 def victory_for(board, sign):
     # The function analyzes the board's status in order to check if
     # the player using 'O's or 'X's has won the game
+    for row in range(3):
+        if board[row][0] == sign and board[row][0] == board[row][1] and board[row][1] == board[row][2]:
+            return sign
+        # check columns
+    for column in range(3):
+        if board[0][column] == sign and board[0][column] == board[1][column] and board[0][column] == board[2][column]:
+            return sign
 
-    return
+    # check diagonals
+    if board[0][0] == sign and board[0][0] == board[1][1] and board[1][1] == board[2][2] or \
+            board[0][2] == sign and board[0][2] == board[1][1] and board[1][1] == board[2][0]:
+        return sign
+
+    return None
 
 
 def draw_move(board):
-    # The function draws the computer's move and updates the board.
-    return
+    free_squares = make_list_of_free_fields(board)
+
+    free_squares_length = len(free_squares)
+    if free_squares_length > 0:
+        random = make_list_of_free_fields(free_squares_length)
+        row, col = free_squares[random]
+        board[row][col] = 'X'

@@ -1,0 +1,347 @@
+[
+  {
+    "bodyTypeId": "273",
+    "nameEnglish": "SEDAN",
+    "nameGeorgian": "სედანი"
+  },
+  {
+    "bodyTypeId": "2001",
+    "nameEnglish": "HIGH PASSABILITY",
+    "nameGeorgian": "მაღალი გამავლობის"
+  },
+  {
+    "bodyTypeId": "274",
+    "nameEnglish": "STATION WAGON",
+    "nameGeorgian": "უნივერსალი"
+  },
+  {
+    "bodyTypeId": "2029",
+    "nameEnglish": "HATCHBACK",
+    "nameGeorgian": "ჰეტჩბეკი"
+  },
+  {
+    "bodyTypeId": "2002",
+    "nameEnglish": "VAN",
+    "nameGeorgian": "ვენი"
+  },
+  {
+    "bodyTypeId": "278",
+    "nameEnglish": "COUPE",
+    "nameGeorgian": "კუპე"
+  },
+  {
+    "bodyTypeId": "2082",
+    "nameEnglish": "---",
+    "nameGeorgian": "---"
+  },
+  {
+    "bodyTypeId": "2030",
+    "nameEnglish": "BUS",
+    "nameGeorgian": "ავტობუსი"
+  },
+  {
+    "bodyTypeId": "2090",
+    "nameEnglish": "BUGGY",
+    "nameGeorgian": "ბაგი"
+  },
+  {
+    "bodyTypeId": "2034",
+    "nameEnglish": "DROP-SIDE TRAILER",
+    "nameGeorgian": "ბორტიანი  მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2035",
+    "nameEnglish": "DROP-SIDE SEMI TRAILER",
+    "nameGeorgian": "ბორტიანი ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "283",
+    "nameEnglish": "BROUGHAM",
+    "nameGeorgian": "ბრეგამი"
+  },
+  {
+    "bodyTypeId": "2021",
+    "nameEnglish": "SCARIFIER BULLDOZER",
+    "nameGeorgian": "ბულდოზერ გამაფხვიერებელი"
+  },
+  {
+    "bodyTypeId": "2040",
+    "nameEnglish": "BULLDOZER",
+    "nameGeorgian": "ბულდოზერი"
+  },
+  {
+    "bodyTypeId": "1569",
+    "nameEnglish": "WHEELED BULLDOZER",
+    "nameGeorgian": "ბულდოზერი ბორბლიანი"
+  },
+  {
+    "bodyTypeId": "2023",
+    "nameEnglish": "GRADER",
+    "nameGeorgian": "გრეიდერი"
+  },
+  {
+    "bodyTypeId": "2091",
+    "nameEnglish": "",
+    "nameGeorgian": "ექსკავატორ დამტვირთველი"
+  },
+  {
+    "bodyTypeId": "2039",
+    "nameEnglish": "EXCAVATOR",
+    "nameGeorgian": "ექსკავატორი"
+  },
+  {
+    "bodyTypeId": "2020",
+    "nameEnglish": "WSELF PROPELLED CRANE",
+    "nameGeorgian": "თვითმავალი ამწე"
+  },
+  {
+    "bodyTypeId": "825",
+    "nameEnglish": "TIPPER",
+    "nameGeorgian": "თვითმცლელი"
+  },
+  {
+    "bodyTypeId": "2008",
+    "nameEnglish": "SELF-UNLOADING TRAILER",
+    "nameGeorgian": "თვითმცლელი მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2013",
+    "nameEnglish": "SELF-UNLOA.SEMI TRAILER",
+    "nameGeorgian": "თვითმცლელი ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "2037",
+    "nameEnglish": "WHEELED  COMBINE",
+    "nameGeorgian": "თვლიანი კომბაინი"
+  },
+  {
+    "bodyTypeId": "2038",
+    "nameEnglish": "WHEELED TRUCK",
+    "nameGeorgian": "თვლიანი სატვირთველი"
+  },
+  {
+    "bodyTypeId": "2086",
+    "nameEnglish": "WHEELED TRACTOR",
+    "nameGeorgian": "თვლიანი ტრაქტორი "
+  },
+  {
+    "bodyTypeId": "281",
+    "nameEnglish": "CABRIOLET",
+    "nameGeorgian": "კაბრიოლეტი"
+  },
+  {
+    "bodyTypeId": "2042",
+    "nameEnglish": "QUADRICYCLE",
+    "nameGeorgian": "კვადროციკლი"
+  },
+  {
+    "bodyTypeId": "284",
+    "nameEnglish": "LOUNDOULET",
+    "nameGeorgian": "ლანდო"
+  },
+  {
+    "bodyTypeId": "276",
+    "nameEnglish": "LIMOUSINE",
+    "nameGeorgian": "ლიმუზინი"
+  },
+  {
+    "bodyTypeId": "2093",
+    "nameEnglish": "MOPED",
+    "nameGeorgian": "მოპედი"
+  },
+  {
+    "bodyTypeId": "1025",
+    "nameEnglish": "MOTORCYCLE",
+    "nameGeorgian": "მოტოციკლი"
+  },
+  {
+    "bodyTypeId": "305",
+    "nameEnglish": "TRAILER LIGHT",
+    "nameGeorgian": "მსუბუქი  მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2094",
+    "nameEnglish": "LIGHT QUADRICYCLE",
+    "nameGeorgian": "მსუბუქი კვადროციკლი"
+  },
+  {
+    "bodyTypeId": "2019",
+    "nameEnglish": "CATERPILLAR CARRIER",
+    "nameGeorgian": "მუხლუხა სატვირთველი"
+  },
+  {
+    "bodyTypeId": "1554",
+    "nameEnglish": "CATERPILLAR TRACTOR",
+    "nameGeorgian": "მუხლუხა ტრაქტორი "
+  },
+  {
+    "bodyTypeId": "280",
+    "nameEnglish": "PICK-UP",
+    "nameGeorgian": "პიკაპი"
+  },
+  {
+    "bodyTypeId": "282",
+    "nameEnglish": "ROADSTER",
+    "nameGeorgian": "როდსტერი"
+  },
+  {
+    "bodyTypeId": "2026",
+    "nameEnglish": "DRILL",
+    "nameGeorgian": "საბურღი"
+  },
+  {
+    "bodyTypeId": "2006",
+    "nameEnglish": "PASSENGER TRAILER",
+    "nameGeorgian": "სამგზავრო მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2007",
+    "nameEnglish": "PESSENGER SEMI-TREILER",
+    "nameGeorgian": "სამგზავრო ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "2031",
+    "nameEnglish": "DROP-SIDE LORRY",
+    "nameGeorgian": "სატვირთო ბორტიანი"
+  },
+  {
+    "bodyTypeId": "2033",
+    "nameEnglish": "LORRY VAN",
+    "nameGeorgian": "სატვირთო ფურგონი"
+  },
+  {
+    "bodyTypeId": "2005",
+    "nameEnglish": "CARGO-PASSENGER",
+    "nameGeorgian": "სატვირთო-სამგზავრო"
+  },
+  {
+    "bodyTypeId": "2025",
+    "nameEnglish": "ROAD-ROLLER",
+    "nameGeorgian": "სატკეპნი"
+  },
+  {
+    "bodyTypeId": "2089",
+    "nameEnglish": "CARAVAN ",
+    "nameGeorgian": "საცხოვრებელი აგარაკი"
+  },
+  {
+    "bodyTypeId": "2022",
+    "nameEnglish": "SCRAPER",
+    "nameGeorgian": "სკრეპერი"
+  },
+  {
+    "bodyTypeId": "875",
+    "nameEnglish": "SCOOTER",
+    "nameGeorgian": "სკუტერი"
+  },
+  {
+    "bodyTypeId": "873",
+    "nameEnglish": "SPECIALIZED",
+    "nameGeorgian": "სპეციალიზებული"
+  },
+  {
+    "bodyTypeId": "2011",
+    "nameEnglish": "SPECIALIZED TRAILER",
+    "nameGeorgian": "სპეციალიზებული მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2016",
+    "nameEnglish": "SPECIALIZED SEMI TRAILER",
+    "nameGeorgian": "სპეციალიზებული ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "306",
+    "nameEnglish": "SPECIAL",
+    "nameGeorgian": "სპეციალური "
+  },
+  {
+    "bodyTypeId": "2004",
+    "nameEnglish": "SPECIAL",
+    "nameGeorgian": "სპეციალური"
+  },
+  {
+    "bodyTypeId": "2012",
+    "nameEnglish": "SPECIAL TRAILER",
+    "nameGeorgian": "სპეციალური მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2028",
+    "nameEnglish": "SPECIAL MOBILE",
+    "nameGeorgian": "სპეციალური მობილური"
+  },
+  {
+    "bodyTypeId": "2017",
+    "nameEnglish": "SPECIAL SEMI TRAILER",
+    "nameGeorgian": "სპეციალური ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "307",
+    "nameEnglish": "SPORTS",
+    "nameGeorgian": "სპორტული"
+  },
+  {
+    "bodyTypeId": "285",
+    "nameEnglish": "TARGA",
+    "nameGeorgian": "ტარგა"
+  },
+  {
+    "bodyTypeId": "290",
+    "nameEnglish": "TRICYCLE ",
+    "nameGeorgian": "ტრიციკლი"
+  },
+  {
+    "bodyTypeId": "801",
+    "nameEnglish": "SADLE TRACKTOR",
+    "nameGeorgian": "უნაგირა საწევარა"
+  },
+  {
+    "bodyTypeId": "289",
+    "nameEnglish": "PHAETON-STATION WAGON",
+    "nameGeorgian": "ფაეტონ-უნივერსალი"
+  },
+  {
+    "bodyTypeId": "277",
+    "nameEnglish": "PHAETON",
+    "nameGeorgian": "ფაეტონი"
+  },
+  {
+    "bodyTypeId": "288",
+    "nameEnglish": "FASTBACK",
+    "nameGeorgian": "ფასტბეკი"
+  },
+  {
+    "bodyTypeId": "279",
+    "nameEnglish": "WAGGON",
+    "nameGeorgian": "ფურგონი"
+  },
+  {
+    "bodyTypeId": "2010",
+    "nameEnglish": "VAN TRAILER",
+    "nameGeorgian": "ფურგონი მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2015",
+    "nameEnglish": "VAN SEMI TRAILER",
+    "nameGeorgian": "ფურგონი ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "2041",
+    "nameEnglish": "TANK",
+    "nameGeorgian": "ცისტერნა"
+  },
+  {
+    "bodyTypeId": "2009",
+    "nameEnglish": "TANK TRAILER",
+    "nameGeorgian": "ცისტერნა მისაბმელი"
+  },
+  {
+    "bodyTypeId": "2014",
+    "nameEnglish": "TANK SEMI TRAILER",
+    "nameGeorgian": "ცისტერნა ნახევარმისაბმელი"
+  },
+  {
+    "bodyTypeId": "2027",
+    "nameEnglish": "PILE DRIVER",
+    "nameGeorgian": "ხიმინჯსასობი"
+  }
+]
